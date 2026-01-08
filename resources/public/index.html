@@ -480,13 +480,10 @@
                 <p class="text-3xl md:text-4xl gradient-text font-bold">Vote Agora!</p>
                 
                 <div class="glass-card rounded-2xl p-8 inline-block">
-                  <div class="w-48 h-48 bg-white rounded-xl flex items-center justify-center">
-                    <div class="text-center text-midnight-950">
-                      <p class="text-4xl mb-2">📱</p>
-                      <p class="text-sm font-medium">QR CODE</p>
-                      <p class="text-xs text-midnight-600 mt-1">Escaneie para votar</p>
-                    </div>
-                  </div>
+                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://votacao-melhores-do-ano.onrender.com/?perfil=votante" 
+                       alt="QR Code para votar" 
+                       class="w-48 h-48 rounded-xl bg-white p-2" />
+                  <p class="text-sm text-midnight-400 mt-3 text-center">Escaneie para votar</p>
                 </div>
               </div>
             </div>
