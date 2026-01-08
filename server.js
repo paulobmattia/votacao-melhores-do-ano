@@ -311,6 +311,15 @@ function resetarCategoria() {
     return true;
 }
 
+function resetarTudo() {
+    gameState.fase = 'aguardando';
+    gameState.indiceCategoriaAtual = 0;
+    gameState.votos = {};
+    gameState.sessoesVotaram.clear();
+    console.log('🔄 Sistema completamente resetado!');
+    return true;
+}
+
 // =============================================================================
 // WEBSOCKET - Sincronização em Tempo Real
 // =============================================================================
@@ -408,6 +417,12 @@ wss.on('connection', (ws, req) => {
                 case 'resetar':
                     if (ws.isAdmin && resetarCategoria()) {
                         console.log('🔄 Categoria resetada');
+                        broadcastState();
+                    }
+                    break;
+
+                case 'resetar-tudo':
+                    if (ws.isAdmin && resetarTudo()) {
                         broadcastState();
                     }
                     break;
