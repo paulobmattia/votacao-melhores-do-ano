@@ -1,0 +1,15 @@
+{
+  "name": "votacao-melhores-do-ano",
+  "version": "1.0.0",
+  "description": "Plataforma de Votação em Tempo Real",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.16.0",
+    "uuid": "^9.0.1"
+  }
+}
